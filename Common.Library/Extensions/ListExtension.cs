@@ -9,9 +9,9 @@ namespace Common.Library.Extensions
 {
     public static class ListExtension
     {
-        public static DataTable ToDataTable(this IEnumerable<T> data, string valueTypeDefaultColumn = "Value")
+        public static DataTable ToDataTable<T>(this IEnumerable<T> data, string valueTypeDefaultColumn = "Value")
         {
-
+            return new DataTable();
         }
     }
 }
