@@ -1,4 +1,6 @@
 ﻿using ClosedXML.Excel;
+using Common.Library.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
@@ -24,15 +26,15 @@ namespace Common.Library.Util
                     _conn = new OleDbConnection("provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + filePath + "; Extended Properties='Excel 12.0;HDR=Yes;IMEX=1;'");
 
                 // -----------------------------------Select Data from Input Excel to dataset------------------------------------
-                OleDbDataAdapter _cmd = new OleDbDataAdapter("Select * as stats from [Sheet1$]", _conn);
+                OleDbDataAdapter _cmd = new OleDbDataAdapter("Select * from [Sheet1$]", _conn);
                 _conn.Open();
                 _cmd.Fill(Dset);
                 _conn.Close();
                 return Dset.Tables[0];
             }
-            catch
+            catch(Exception ex)
             {
-                return new DataTable();
+                throw ex;
             }
             finally
             {
@@ -42,6 +44,17 @@ namespace Common.Library.Util
         }
         public static void ToExcel(this DataTable dt, string fileName)
         {
+            fileName = $"{fileName}.xlsx";
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                //Add DataTable in worksheet  
+                wb.Worksheets.Add(dt, "Sheet1");
+                wb.SaveAs(fileName);
+            }
+        }
+        public static void ToExcel<T>(this IEnumerable<T> data, string fileName)
+        {
+            DataTable dt = data.ToDataTable();
             fileName = $"{fileName}.xlsx";
             using (XLWorkbook wb = new XLWorkbook())
             {
