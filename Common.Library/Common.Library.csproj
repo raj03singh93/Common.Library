@@ -61,10 +61,15 @@
   <ItemGroup>
     <Compile Include="Extensions\ListExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Util\Excel.cs" />
+    <Compile Include="Utils\ExcelUtility.cs" />
+    <Compile Include="Utils\StringUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Handler\" />
+    <Folder Include="Middleware\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

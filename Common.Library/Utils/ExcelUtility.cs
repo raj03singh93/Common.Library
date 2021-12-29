@@ -7,11 +7,18 @@ using System.Data.OleDb;
 using System.IO;
 using System.Linq;
 
-namespace Common.Library.Util
+namespace Common.Library.Utils
 {
-    public static class Excel
+    /// <summary>
+    /// Excel Utility
+    /// </summary>
+    public static class ExcelUtility
     {
-        
+        /// <summary>
+        /// Reads excels.
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns>Datatable of excel data.</returns>
         public static DataTable ReadExcel(string filePath)
         {
             OleDbConnection _conn = new OleDbConnection();
@@ -42,6 +49,12 @@ namespace Common.Library.Util
                     _conn.Close();
             }
         }
+
+        /// <summary>
+        /// Converts datatable to excel
+        /// </summary>
+        /// <param name="dt">datatable.</param>
+        /// <param name="fileName">fileName.</param>
         public static void ToExcel(this DataTable dt, string fileName)
         {
             fileName = $"{fileName}.xlsx";
@@ -52,6 +65,12 @@ namespace Common.Library.Util
                 wb.SaveAs(fileName);
             }
         }
+        /// <summary>
+        /// Converts a list to excel.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="data"></param>
+        /// <param name="fileName"></param>
         public static void ToExcel<T>(this IEnumerable<T> data, string fileName)
         {
             DataTable dt = data.ToDataTable();
@@ -63,6 +82,12 @@ namespace Common.Library.Util
                 wb.SaveAs(fileName);
             }
         }
+
+        /// <summary>
+        /// Converts datatable to CSV.
+        /// </summary>
+        /// <param name="dt">Datatable.</param>
+        /// <param name="fileName">fileName.</param>
         public static void ToCSV(this DataTable dt, string fileName)
         {
             fileName = $"{fileName}.csv";
