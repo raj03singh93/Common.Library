@@ -3,7 +3,7 @@ using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace Common.Middleware
+namespace Common.Library.Middleware
 {
 
     /// <summary>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 
-namespace Common.Extensions
+namespace Common.Library.Extensions
 {
     /// <summary>
     /// List extentions.

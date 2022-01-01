@@ -1,10 +1,10 @@
-﻿using Common.Model;
+﻿using Common.Library.Model;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 
-namespace Common.Utils
+namespace Common.Library.Utils
 {
     public static class JwtTokenGenerator
     {

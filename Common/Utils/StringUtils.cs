@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Common.Utils
+namespace Common.Library.Utils
 {
     /// <summary>
     /// String Utility class for Campaigner.

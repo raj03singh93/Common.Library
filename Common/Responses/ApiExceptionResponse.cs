@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
-namespace Common.Responses
+namespace Common.Library.Responses
 {
     /// <summary>
     /// The API Exceptiion Response

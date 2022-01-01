@@ -1,4 +1,4 @@
-﻿using Common.Handler;
+﻿using Common.Library.Handler;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Http;
 using Microsoft.OpenApi.Models;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Extensions
+namespace Common.Library.Extensions
 {
     public static class CustomExtentions
     {

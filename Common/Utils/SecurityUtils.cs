@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Common.Utils
+namespace Common.Library.Utils
 {
     /// <summary>
     /// Security utils class for Campaigner

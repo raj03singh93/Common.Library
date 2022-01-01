@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Security.Claims;
 
-namespace Common.Model
+namespace Common.Library.Model
 {
     /// <summary>
     /// Jwt Token Generator Model

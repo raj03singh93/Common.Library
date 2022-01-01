@@ -1,10 +1,10 @@
-using Common.Model;
-using Common.Utils;
+using Common.Library.Model;
+using Common.Library.Utils;
 using System.Collections.Generic;
 using System.Security.Claims;
 using Xunit;
 
-namespace Common.Tests
+namespace Common.Library.Tests
 {
     /// <summary>
     /// Library Unit Test

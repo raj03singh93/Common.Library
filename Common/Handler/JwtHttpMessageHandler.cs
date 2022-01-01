@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Common.Handler
+namespace Common.Library.Handler
 {
     /// <summary>
     /// Delegating Handler to add authorization header to httpClient.

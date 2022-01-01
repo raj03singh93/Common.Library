@@ -1,9 +1,9 @@
-﻿using Common.Responses;
+﻿using Common.Library.Responses;
 
 using System;
 using System.Net;
 
-namespace Common.Exceptions
+namespace Common.Library.Library.Exceptions
 {
     /// <summary>
     /// Base Api Exception class
