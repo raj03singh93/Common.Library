@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Description>A common library for core common tasks.</Description>
+    <RepositoryUrl>https://github.com/raj03singh93/Packages</RepositoryUrl>
+    <Authors>Raj</Authors>
+    <PackageReleaseNotes>Added Common functions</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
