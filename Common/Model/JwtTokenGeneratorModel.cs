@@ -7,22 +7,8 @@ namespace Common.Library.Model
     /// <summary>
     /// Jwt Token Generator Model
     /// </summary>
-    public class JwtTokenGeneratorModel
+    public class JwtTokenGeneratorModel : JwtTokenModel
     {
-        /// <summary>
-        /// Issuer
-        /// </summary>
-        public string Issuer { get; set; }
-
-        /// <summary>
-        /// Audiance
-        /// </summary>
-        public string Audiance { get; set; }
-
-        /// <summary>
-        /// Key 
-        /// </summary>
-        public string Key { get; set; }
 
         /// <summary>
         /// ExpireAfter (In Minutes)
@@ -37,6 +23,6 @@ namespace Common.Library.Model
         /// <summary>
         /// List of Claims to create.
         /// </summary>
-        public List<Claim> Claims { get; set; }
+        public List<Claim> Claims { get; set; } = new List<Claim>();
     }
 }
