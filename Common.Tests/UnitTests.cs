@@ -1,3 +1,4 @@
+using Common.Library.Enum;
 using Common.Library.Model;
 using Common.Library.Utils;
 using System.Collections.Generic;
@@ -32,6 +33,14 @@ namespace Common.Library.Tests
             // Assert
             Assert.IsType<string>(token);
 
+        }
+
+        [Fact]
+        public void AuthenticationType_Test()
+        {
+            ApiAuthenticationType type = ApiAuthenticationType.Basic;
+            string strType = nameof(type);
+            Assert.Equal("Basic", strType);
         }
     }
 }
